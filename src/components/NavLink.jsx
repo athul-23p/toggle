@@ -7,7 +7,7 @@ const LinkWrapper = styled.div`
   display: flex;
   align-items: center;
 
-    
+  
 `;
 
 function NavLink({image}){

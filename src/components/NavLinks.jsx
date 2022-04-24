@@ -19,11 +19,15 @@ const NavLinksWrapper = styled.div`
     margin: 9px;
   }
 
+  &>div{
+    width: 110%;
+    padding: 10px;
+  }
   & div:nth-child(1) {
     background: linear-gradient(180deg, #679cf6 0%, #4072ee 100%);
     box-shadow: 0px 5px 15px #acb2c1;
     border-radius: 5px;
-    
+    transform: scale(1.1);
     
   }
 `;
