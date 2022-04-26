@@ -1,6 +1,6 @@
-
 import styled from "styled-components";
-
+import { ThemeContext } from "../contexts/ThemeContext";
+import { useContext } from "react";
 const ToggleWrapper = styled.div`
   display: flex;
 
@@ -12,7 +12,6 @@ const ToggleWrapper = styled.div`
     background-color: #dfd3d3;
     outline: none;
     transition: 0.7s;
- 
   }
   #theme-selector:before {
     content: "";
@@ -53,24 +52,34 @@ const ToggleWrapper = styled.div`
     width: 40px;
     border-radius: 50%;
   }
-  p{
-      font-size: 12px;
-      position: relative;
-      top: 10px;
-      left:15px
+  p {
+    font-size: 12px;
+    position: relative;
+    top: 10px;
+    left: 15px;
   }
 `;
-function ThemeToggle(){
+function ThemeToggle() {
+  const { handleTheme } = useContext(ThemeContext);
 
-
-    return <ToggleWrapper>
-        <p>Dark mode</p>
-        <div id='selector-wrapper'>
-            <div id="left"></div>
-            <input type="checkbox" name="theme" id="theme-selector" />
-            <div id="right"></div>
-        </div>
+  const handleChange = () => {
+    handleTheme();
+  };
+  return (
+    <ToggleWrapper>
+      <p>Dark mode</p>
+      <div id="selector-wrapper">
+        <div id="left"></div>
+        <input
+          type="checkbox"
+          name="theme"
+          id="theme-selector"
+          onChange={handleChange}
+        />
+        <div id="right"></div>
+      </div>
     </ToggleWrapper>
+  );
 }
 
 export default ThemeToggle;

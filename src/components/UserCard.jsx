@@ -73,25 +73,24 @@ const CardWrapper = styled.div`
 
   .bar-fg {
     position: relative;
-    bottom: 21px;
+    bottom: 22px;
     height: 7px;
     width: ${(props) => {
-        const { user } = props;
-        const width = Math.round(user.points / 60);
-        console.log(width + "%");
-        return width + "%";
-      }};
-      & div {
+      const { user } = props;
+      const width = Math.round(user.points / 60);
+      return width + "%";
+    }};
+    & div {
       background-color: dodgerblue;
     }
   }
-  .settings{
-    color:grey;
+  .settings {
+    color: grey;
     margin-left: 50%;
   }
 `;
 function UserCard({ user }) {
-//   console.log(user);
+  //   console.log(user);
   return (
     <CardWrapper user={user}>
       <div>
