@@ -22,7 +22,6 @@ const SideNavbarWrapper = styled.div`
 
 function SideNavbar() {
   const { activeTheme } = useContext(ThemeContext);
-  console.log(activeTheme);
 
   return (
     <SideNavbarWrapper theme={activeTheme}>

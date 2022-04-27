@@ -36,6 +36,7 @@ function Statistics() {
       professional_level: 15,
       points: 4723,
       image: img1,
+      pgb_color: "#29cc97",
     },
     {
       name: "Sandhya",
@@ -43,6 +44,7 @@ function Statistics() {
       professional_level: 11,
       points: 2338,
       image: img2,
+      pgb_color: "#4072ed",
     },
     {
       name: "Elon Tusk",
@@ -50,6 +52,7 @@ function Statistics() {
       professional_level: 6,
       points: 1884,
       image: img3,
+      pgb_color: "#b658f6",
     },
   ];
 

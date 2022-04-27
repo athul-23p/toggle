@@ -81,7 +81,7 @@ const CardWrapper = styled.div`
       return width + "%";
     }};
     & div {
-      background-color: dodgerblue;
+      background-color: ${(props) => props.user.pgb_color};
     }
   }
   .settings {
